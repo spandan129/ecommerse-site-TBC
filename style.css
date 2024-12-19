@@ -1,0 +1,146 @@
+/* Import Bulma */
+@import 'bulma/css/bulma.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+/* Typography */
+.title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: 'Syne', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hero-body {
+  padding: 6rem 2rem;
+}
+
+.hero .title {
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-item {
+  font-family: 'Syne', sans-serif;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-image {
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.product-description {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Category Section */
+.category-section {
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.category-card {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.02);
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.category-title {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Cart */
+.cart-indicator {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cart-indicator:hover {
+  transform: scale(1.05);
+}

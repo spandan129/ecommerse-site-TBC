@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - ShopEasy</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <!-- ... (same navbar code as index.html) ... -->
+    </nav>
+
+    <!-- Product Details -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <!-- Product Images -->
+          <div class="column is-6">
+            <figure class="image is-4by3">
+              <img src="https://via.placeholder.com/800x600" alt="Product">
+            </figure>
+            <div class="columns is-mobile mt-2">
+              <div class="column is-3">
+                <figure class="image is-square">
+                  <img src="https://via.placeholder.com/200" alt="Thumbnail 1">
+                </figure>
+              </div>
+              <div class="column is-3">
+                <figure class="image is-square">
+                  <img src="https://via.placeholder.com/200" alt="Thumbnail 2">
+                </figure>
+              </div>
+              <div class="column is-3">
+                <figure class="image is-square">
+                  <img src="https://via.placeholder.com/200" alt="Thumbnail 3">
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="column is-6">
+            <h1 class="title is-2">Smartphone X</h1>
+            <p class="subtitle is-4 has-text-primary">$999</p>
+            
+            <div class="content">
+              <p>Latest smartphone with amazing features including:</p>
+              <ul>
+                <li>6.7-inch Super AMOLED display</li>
+                <li>Triple camera system</li>
+                <li>5G connectivity</li>
+                <li>All-day battery life</li>
+              </ul>
+            </div>
+
+            <div class="field">
+              <label class="label">Quantity</label>
+              <div class="control">
+                <input class="input" type="number" value="1" min="1">
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="button is-primary is-large">Add to Cart</button>
+              <button class="button is-light is-large">Add to Wishlist</button>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="tabs is-boxed">
+              <ul>
+                <li class="is-active"><a>Description</a></li>
+                <li><a>Specifications</a></li>
+                <li><a>Reviews</a></li>
+              </ul>
+            </div>
+            <div class="content">
+              <p>Detailed product description goes here...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>© 2024 ShopEasy. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

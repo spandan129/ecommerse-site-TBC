@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category - Modern Living</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 class="title is-4">Modern Living</h1>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/cart.html">Cart</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Category Products -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3" id="categoryTitle"></h2>
+      <div class="product-grid" id="categoryProducts">
+        <!-- Products will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <script type="module">
+    import products from './data/products.json';
+
+    // Get category from URL
+    const params = new URLSearchParams(window.location.search);
+    const categoryId = params.get('id');
+
+    const category = products.categories.find(c => c.id === categoryId);
+    if (category) {
+      document.getElementById('categoryTitle').textContent = category.name;
+      
+      const productsGrid = document.getElementById('categoryProducts');
+      category.products.forEach(product => {
+        productsGrid.innerHTML += `
+          <div class="product-card">
+            <figure class="image">
+              <img src="${product.image}" alt="${product.name}" class="product-image">
+            </figure>
+            <div class="p-4">
+              <h3 class="title is-5">${product.name}</h3>
+              <p class="subtitle is-6">$${product.price}</p>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>

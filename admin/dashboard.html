@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - ShopEasy</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/admin/dashboard.html">
+          <h1 class="title is-4 has-text-white">ShopEasy Admin</h1>
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/admin/dashboard.html">Dashboard</a>
+          <a class="navbar-item" href="/admin/products.html">Products</a>
+          <a class="navbar-item" href="/admin/orders.html">Orders</a>
+          <a class="navbar-item" href="/admin/customers.html">Customers</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a href="/" class="button is-light">Back to Store</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="columns is-gapless">
+      <!-- Sidebar -->
+      <div class="column is-2">
+        <aside class="menu p-4 has-background-light" style="height: calc(100vh - 52px);">
+          <p class="menu-label">
+            General
+          </p>
+          <ul class="menu-list">
+            <li><a class="is-active">Dashboard</a></li>
+            <li><a>Settings</a></li>
+          </ul>
+          <p class="menu-label">
+            Products
+          </p>
+          <ul class="menu-list">
+            <li><a>All Products</a></li>
+            <li><a>Add New Product</a></li>
+            <li><a>Categories</a></li>
+          </ul>
+          <p class="menu-label">
+            Orders
+          </p>
+          <ul class="menu-list">
+            <li><a>All Orders</a></li>
+            <li><a>Pending</a></li>
+            <li><a>Completed</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="column is-10">
+        <section class="section">
+          <!-- Stats Cards -->
+          <div class="columns">
+            <div class="column">
+              <div class="box has-background-primary has-text-white">
+                <h2 class="title is-4 has-text-white">Total Sales</h2>
+                <p class="title is-2 has-text-white">$15,350</p>
+                <p>+12% from last month</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box has-background-link has-text-white">
+                <h2 class="title is-4 has-text-white">Orders</h2>
+                <p class="title is-2 has-text-white">125</p>
+                <p>23 pending</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box has-background-success has-text-white">
+                <h2 class="title is-4 has-text-white">Products</h2>
+                <p class="title is-2 has-text-white">48</p>
+                <p>5 out of stock</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box has-background-warning has-text-white">
+                <h2 class="title is-4 has-text-white">Customers</h2>
+                <p class="title is-2 has-text-white">1,234</p>
+                <p>+89 this month</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Orders -->
+          <div class="box">
+            <h3 class="title is-4">Recent Orders</h3>
+            <table class="table is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Products</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1234</td>
+                  <td>John Doe</td>
+                  <td>Smartphone X</td>
+                  <td>$999</td>
+                  <td><span class="tag is-warning">Pending</span></td>
+                  <td>
+                    <div class="buttons are-small">
+                      <button class="button is-info">View</button>
+                      <button class="button is-success">Complete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1235</td>
+                  <td>Jane Smith</td>
+                  <td>Laptop Pro</td>
+                  <td>$1499</td>
+                  <td><span class="tag is-success">Completed</span></td>
+                  <td>
+                    <div class="buttons are-small">
+                      <button class="button is-info">View</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Add Product Form -->
+          <div class="box">
+            <h3 class="title is-4">Add New Product</h3>
+            <form>
+              <div class="field">
+                <label class="label">Product Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Enter product name">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Enter product description"></textarea>
+                </div>
+              </div>
+
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Price</label>
+                    <div class="control">
+                      <input class="input" type="number" placeholder="Enter price">
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Category</label>
+                    <div class="control">
+                      <div class="select is-fullwidth">
+                        <select>
+                          <option>Electronics</option>
+                          <option>Fashion</option>
+                          <option>Home & Living</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Stock</label>
+                    <div class="control">
+                      <input class="input" type="number" placeholder="Enter stock quantity">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Product Images</label>
+                <div class="control">
+                  <div class="file has-name">
+                    <label class="file-label">
+                      <input class="file-input" type="file" multiple>
+                      <span class="file-cta">
+                        <span class="file-label">
+                          Choose files...
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <button class="button is-primary">Add Product</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

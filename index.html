@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Living</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 class="title is-4">Modern Living</h1>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/cart.html">Cart</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Indicator -->
+  <div class="cart-indicator">
+    Cart (0)
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="hero is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1">Welcome to Modern Living</h1>
+        <p class="subtitle is-3">Curated designs for contemporary spaces</p>
+        <div class="content mt-6">
+          <p class="is-size-4">Discover our collection of minimalist furniture and decor pieces, 
+          carefully selected to enhance your living space with timeless elegance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Selling Products -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3">Top Selling</h2>
+      <div class="product-grid" id="topSelling"></div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="category-section">
+    <div class="container">
+      <div class="columns is-multiline" id="categories"></div>
+    </div>
+  </section>
+
+  <script type="module">
+    import { products } from './js/data.js';
+    import { renderProducts } from './js/products.js';
+    import { renderCategories } from './js/categories.js';
+    import { cart } from './js/cart.js';
+
+    // Initialize cart
+    cart.updateCartIndicator();
+
+    // Render products and categories
+    const topSellingContainer = document.getElementById('topSelling');
+    const categoriesContainer = document.getElementById('categories');
+
+    if (topSellingContainer && categoriesContainer) {
+      renderProducts(products.topSelling, topSellingContainer);
+      renderCategories(products.categories, categoriesContainer);
+    }
+  </script>
+</body>
+</html>
